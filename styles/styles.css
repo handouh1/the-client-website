@@ -10,16 +10,19 @@ header {
     color: white; 
     padding: 1rem; /* Ruimte binnen de header toevoegen */
     text-align: center;
+    display: grid;
+    grid-template-columns: 80px 1fr; 
+    grid-template-rows: auto auto;                              
+  
 }
 
 header h1 {
     margin: 0; 
+    grid-column: 2 / 3;   /* tweede kolom */
+    grid-row: 1 / 2;      /* eerste rij */
+    margin: 0;
 }
 
-header h2 {
-    margin: 0.2rem ;
-    
-}
 
 /* Navigatie */
 nav {
@@ -42,6 +45,10 @@ nav a {
 /* Zoekbalk */
 form {
     margin: 1rem;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;      /* eventueel derde rij als je zoekt */
+    margin-top: 0.5rem;
+
 }
 
 input[type="search"] {
@@ -85,4 +92,16 @@ main img {
     aspect-ratio: 1/1; /* maakt het vierkant */
     height: auto; 
     border-radius: 10px; 
+}
+
+.logo img {
+    height: 50px;       
+    width: auto;    
+    margin-bottom: 0.5rem;
+}
+
+/* Logo */
+.logo {
+    grid-column: 1 / 2;   /* logo in de eerste kolom */
+    grid-row: 1 / 3
 }
