@@ -1,1 +1,88 @@
-/* CSS */
+
+body {
+    margin: 0; /* Haalt standaard witruimte weg */
+    background-color: #f9f9f9; 
+}
+
+/* Header */
+header {
+    background-color: #ddc0f5;
+    color: white; 
+    padding: 1rem; /* Ruimte binnen de header toevoegen */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0; 
+}
+
+header h2 {
+    margin: 0.2rem ;
+    
+}
+
+/* Navigatie */
+nav {
+    
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+nav a {
+    margin: 0.5rem; 
+    text-decoration: none; /* Haalt onderlijning weg */
+    font-size: 1.5rem; 
+}
+
+/* Zoekbalk */
+form {
+    margin: 1rem;
+}
+
+input[type="search"] {
+    padding: 0.5rem; 
+    
+}
+
+button {
+    padding: 0.5rem; 
+    border-radius: 5px;   
+}
+
+/* Afbeeldingen in grid */
+main section {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 10px; 
+    padding: 1rem; 
+}
+
+@media (min-width: 800px) {
+   nav {
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    flex-direction: column;
+  }
+
+   main {
+    padding-left: 100px; /* ruimte voor verticale nav */
+    padding-bottom: 0;
+  }
+
+  main section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+main img {
+    width: 100%; 
+    aspect-ratio: 1/1; /* maakt het vierkant */
+    height: auto; 
+    border-radius: 10px; 
+}
