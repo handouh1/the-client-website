@@ -13,20 +13,21 @@ header {
     display: grid;
     grid-template-columns: 80px 1fr; 
     grid-template-rows: auto auto;                              
-  
-}
-
-header h1 {
+   
+    h1 {
     margin: 0; 
     grid-column: 2 / 3;   /* tweede kolom */
     grid-row: 1 / 2;      /* eerste rij */
     margin: 0;
 }
 
+}
+
+
 
 /* Navigatie */
 nav {
-    
+  
   position: fixed;
   bottom: 0;
   left: 0;
@@ -34,13 +35,22 @@ nav {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-}
 
-nav a {
+  nav a {
     margin: 0.5rem; 
     text-decoration: none; /* Haalt onderlijning weg */
     font-size: 1.5rem; 
 }
+
+  @media (min-width: 800px) {
+  
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    flex-direction: column;
+ }
+}
+
 
 /* Zoekbalk */
 form {
@@ -49,17 +59,17 @@ form {
     grid-row: 3 / 4;      /* eventueel derde rij als je zoekt */
     margin-top: 0.5rem;
 
-}
-
-input[type="search"] {
+    input[type="search"] {
     padding: 0.5rem; 
-    
-}
+    }   
 
-button {
+ button {
     padding: 0.5rem; 
     border-radius: 5px;   
 }
+
+}
+
 
 /* Afbeeldingen in grid */
 main section {
@@ -69,23 +79,17 @@ main section {
     padding: 1rem; 
 }
 
-@media (min-width: 800px) {
-   nav {
-    top: 0;
-    bottom: 0;
-    width: 80px;
-    flex-direction: column;
-  }
 
-   main {
+main {
     padding-left: 100px; /* ruimte voor verticale nav */
     padding-bottom: 0;
+
+    section {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+  
   }
 
-  main section {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
 
 main img {
     width: 100%; 
@@ -94,13 +98,16 @@ main img {
     border-radius: 10px; 
 }
 
+
 .logo img {
     height: 50px;       
     width: auto;    
     margin-bottom: 0.5rem;
 }
 
+
 /* Logo */
+
 .logo {
     grid-column: 1 / 2;   /* logo in de eerste kolom */
     grid-row: 1 / 3
