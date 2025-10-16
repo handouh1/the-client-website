@@ -15,16 +15,16 @@
 
      <!-- Navigatie met icoontjes -->
          <nav>
-            <a href="#">🏠</a>
-            <a href="#">🔍</a>
-            <a href="#">👤</a>
-            <a href="#">👥</a>
-            <a href="#">⚙️</a>
+            <a href="#" aria-label="Home">🏠</a>
+            <a href="#" aria-label="Search">🔍</a>
+            <a href="#" aria-label="Profile">👤</a>
+            <a href="#" aria-label="groups">👥</a>
+            <a href="#" aria-label="settings">⚙️</a>
          </nav>
 
      <!-- Profiel -->
         <div class="logo">
-            <a href="#">
+            <a href="#" aria-label="Snappthis home">
             <img src="images/logo snappthis.jpg" alt="logo">
             </a>
          </div>
@@ -34,26 +34,33 @@
      </header>
 
  <!-- zoekbalk -->
- <form action="#" method="get">
-             <input type="search" placeholder="Zoeken...">
-             <button type="submit">🔍</button>
+ <form action="#" method="get" role="search">
+             <label for="search-field" class="visually-hidden">search-field</label>
+             <input id="search-field" type="search" placeholder="Search..." aria-label="zoekveld"> 
+             <button type="submit" aria-label="search">🔍</button>
  </form>     
 
  <main>
-        <section>
-            <!-- foto's thema happy -->
-            <img src="images/happy1.jpg" alt="happy1" width="200" height="200">
-            <img src="images/happy2.jpg" alt="happy2" width="200" height="200">
-            <img src="images/happy3.jpg" alt="happy3" width="200" height="200">
-            <img src="images/happy4.jpg" alt="happy4" width="200" height="200">
-            <img src="images/happy5.jpg" alt="happy5" width="200" height="200">
-            <img src="images/happy6.jpg" alt="happy6" width="200" height="200">
-            <img src="images/happy7.jpg" alt="happy7" width="200" height="200">
-            <img src="images/happy8.jpg" alt="happy8" width="200" height="200">
+    <h2 id="fotos">Foto's</h2>
+
+        <section aria-label="Happy theme photos"> <!-- label voor screenreaders -->
+        <!-- foto's thema happy -->
+            <img src="images/happy1.jpg" alt="drie vrouwen die proosten in de zon" width="200" height="200">
+            <img src="images/happy2.jpg" alt="lach gezicht in het zand" width="200" height="200">
+            <img src="images/happy3.jpg" alt="baloon met een bloemen vorm die lacht" width="200" height="200">
+            <img src="images/happy4.jpg" alt="een roze bloem bij het strand" width="200" height="200">
+            <img src="images/happy5.jpg" alt="een fotocamera met het strand als beeld" width="200" height="200">
+            <img src="images/happy6.jpg" alt="een vrouw die lacht met een witte bloem" width="200" height="200">
+            <img src="images/happy7.jpg" alt="strand foto met zonsondergang" width="200" height="200">
+            <img src="images/happy8.jpg" alt="zand met tekst good vibes only er op" width="200" height="200">
 
         </section>
-
  </main>
+
+<footer aria-label="website footer">
+    <p>&copy; 2025 SnappThis</p>
+</footer>
+
 
     
 
