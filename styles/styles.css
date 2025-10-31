@@ -38,9 +38,6 @@ header {
      margin: 0; 
    }
 
-   
-
-
     /* Header media query */
     @media (min-width: 800px) {
         background-color: #f9f9f9;    
@@ -56,7 +53,7 @@ form{
     @media (min-width: 800px) {
      display: grid;
      grid-template-columns: 1fr auto;
-    gap: 0.5rem;
+     gap: 0.5rem;
    }
     
 }
